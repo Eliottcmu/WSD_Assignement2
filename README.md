@@ -22,10 +22,9 @@ The Bookstore API provides a backend service for managing an online bookstore ec
 
 ## Deployment Address (JCloud)
 
-* **Base URL**: `http://113.198.66.75:19164`
-* **Swagger UI**: `http://113.198.66.75:19164/swagger`
-* **Health Check**: `http://113.198.66.75:19164/health`
-
+* **Base URL**: `http://113.198.66.75:18164`
+* **Swagger UI**: `http://113.198.66.75:18164/swagger`
+* **Health Check**: `http://113.198.66.75:18164/health` 
 ---
 
 ## Environment Variable Descriptions (matching `.env.example`)
