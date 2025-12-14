@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "c83650bf-b5e0-44ce-9927-c6c6f2b28d08",
+		"name": "WSD Assignement 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49161996",
+		"_collection_link": "https://ecamou-7064066.postman.co/workspace/pracrice2_express~c91e8920-8511-4e42-92c5-f0e61a0b522d/collection/49161996-c83650bf-b5e0-44ce-9927-c6c6f2b28d08?action=share&source=collection_link&creator=49161996"
+	},
+	"item": [
+		{
+			"name": "Auth login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5149/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5149",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5149/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5149",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjY5MzgxZGY1NGQ1YTJlNDUyZjczY2E1ZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJpc19hZG1pbiI6InRydWUiLCJqdGkiOiI4NWM0NzllYy01MTQ5LTQwNzItYjhjMC1lYmI3NGNkYWM4OWMiLCJleHAiOjE3NjU2MTQxMjgsImlzcyI6IkJvb2tzdG9yZSIsImF1ZCI6IkJvb2tzdG9yZS1Vc2VycyJ9.eFAOSc_haaR0seX8ukSTyuD3R2FTIz3Pm4bsL1vt7Ws",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sellerId\": \"69381dcd4d5a2e452f73ba95\",\r\n  \"title\": \"Introduction to Postman\",\r\n  \"authors\": [\r\n    \"Me\"\r\n  ],\r\n  \"categories\": [\r\n    \"Code\"\r\n  ],\r\n  \"publisher\": \"None\",\r\n  \"summary\": \"Introduction to Postman to test API\",\r\n  \"isbn\": \"123456789\",\r\n  \"price\": 10000,\r\n  \"publicationDate\": \"2025-12-13T08:02:51.316Z\",\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5149/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5149",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjY5MzgxZGY1NGQ1YTJlNDUyZjczY2E1ZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJpc19hZG1pbiI6InRydWUiLCJqdGkiOiJhNTBkNTIwNC0wM2JjLTRkODItYWEyNC0yYWY2ZGU4ZDEwOGQiLCJleHAiOjE3NjU2MzM3MTAsImlzcyI6IkJvb2tzdG9yZSIsImF1ZCI6IkJvb2tzdG9yZS1Vc2VycyJ9.jygC-pPfMOaBSeDvQWvaaoT7cLgvECrRGTAYGb0P26A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5149/api/orders/69381dd44d5a2e452f73c4e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5149",
+					"path": [
+						"api",
+						"orders",
+						"69381dd44d5a2e452f73c4e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjY5MzgxZGY1NGQ1YTJlNDUyZjczY2E1ZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJpc19hZG1pbiI6InRydWUiLCJqdGkiOiIxNmFlYmVjMy1kYjE1LTQ0MmMtODY2ZC1hMjlkOTdkNDQxYWIiLCJleHAiOjE3NjU2MzUwMzIsImlzcyI6IkJvb2tzdG9yZSIsImF1ZCI6IkJvb2tzdG9yZS1Vc2VycyJ9.2B15BNuDwvYrEP0NhfDPkQDQ7sVXO4bkSSDNrx65XrI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Someting to update\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5149/api/reviews/693d3e33456986ae26bbfc9c/comments/693d6f00750d8723628770fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5149",
+					"path": [
+						"api",
+						"reviews",
+						"693d3e33456986ae26bbfc9c",
+						"comments",
+						"693d6f00750d8723628770fd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
